@@ -1,0 +1,106 @@
+:root {
+  --c-form: #f1f5f9;
+  --c-border: #a1a1aa;
+  --c-input-text: #52525b;
+  --c-label: #71717a;
+  --border-thickness: 2px;
+  --c-invalid: #d55c5f;
+  --c-valid: #84cc16;
+  --c-focus: #38bdf8;
+  --c-button-text: #ffffff;
+  --c-button: #5995da;
+  --c-button-hover: #76AEED;
+  --c-button-active: #407FC7;
+}
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  background-color: var(--c-form);
+  border: var(--border-thickness) solid var(--c-border);
+  border-radius: 3px;
+  width: 30%;
+  padding: 1rem;
+}
+.form-row {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.form-row label {
+  margin-bottom: 10px;
+  color: var(--c-label);
+  font-weight: 600;
+}
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="password"],
+.form-row textarea,
+.form-row select {
+  background-color: #ffffff;
+  border: var(--border-thickness) solid #d6d9dc;
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 1rem;
+  color: var(--c-input-text);
+  transition: 0.3s ease;
+}
+.form-row input[type="text"]:invalid,
+.form-row input[type="email"]:invalid,
+.form-row input[type="password"]:invalid {
+  border: var(--border-thickness) solid var(--c-invalid);
+  box-shadow: none; /* Remove default red glow in Firefox */
+  box-shadow: 0 0 5px var(--c-invalid);
+}
+.form-row input[type="email"]:valid,
+.form-row input[type="text"]:valid,
+.form-row input[type="password"]:valid {
+  border: var(--border-thickness) solid var(--c-valid);
+  box-shadow: none; /* Remove default red glow in Firefox */
+  box-shadow: 0 0 5px var(--c-valid);
+}
+.form-row input[type="email"]:focus,
+.form-row input[type="text"]:focus,
+.form-row input[type="password"]:focus {
+  outline: none;
+  border: var(--border-thickness) solid var(--c-focus);
+  box-shadow: none; /* Remove default red glow in Firefox */
+  box-shadow: 0 0 5px var(--c-focus);
+}
+.form-row button {
+  font-weight: bold;
+  color: var(--c-button-text);
+  background-color: var(--c-button);
+  border: none;
+  border-radius: 3px;
+  padding: 10px 40px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+.form-row button:hover {
+  background-color: var(--c-button-hover);
+}
+.form-row button:active {
+  background-color: var(--c-button-active);
+}

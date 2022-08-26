@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="validation.js" defer></script>
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <form action="" class="form">
+      <p>
+        Required fields are followed by
+        <strong><span aria-label="required">*</span></strong
+        >.
+      </p>
+      <div class="form-row">
+        <label for="email"
+          >Email<strong><span aria-label="required">*</span></strong></label
+        >
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="john@example.com"
+        />
+      </div>
+      <div class="form-row">
+        <label for="country"
+          >Country<strong><span aria-label="required">*</span></strong></label
+        >
+        <input id="country" name="country" type="text" placeholder="Latvia" />
+      </div>
+      <div class="form-row">
+        <label for="zip"
+          >ZIP Code<strong><span aria-label="required">*</span></strong></label
+        >
+        <input id="zip" name="zip" type="text" placeholder="LV-2000" />
+      </div>
+      <div class="form-row">
+        <label for="password"
+          >Password<strong><span aria-label="required">*</span></strong></label
+        >
+        <input id="password" name="password" type="password" />
+      </div>
+      <div class="form-row">
+        <label for="password"
+          >Confirm Password<strong
+            ><span aria-label="required">*</span></strong
+          ></label
+        >
+        <input id="password_confirm" name="password_confirm" type="password" />
+      </div>
+      <div class="form-row">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
