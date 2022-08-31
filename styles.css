@@ -9,8 +9,8 @@
   --c-focus: #38bdf8;
   --c-button-text: #ffffff;
   --c-button: #5995da;
-  --c-button-hover: #76AEED;
-  --c-button-active: #407FC7;
+  --c-button-hover: #76aeed;
+  --c-button-active: #407fc7;
 }
 html {
   -webkit-box-sizing: border-box;
@@ -96,11 +96,23 @@ body {
   border-radius: 3px;
   padding: 10px 40px;
   cursor: pointer;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 .form-row button:hover {
   background-color: var(--c-button-hover);
 }
 .form-row button:active {
   background-color: var(--c-button-active);
+}
+.error {
+  width: 100%;
+  padding: 0;
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+}
+.error.active {
+  padding: 0.3em;
 }
